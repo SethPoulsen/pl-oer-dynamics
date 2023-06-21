@@ -1,0 +1,43 @@
+<pl-question-panel>
+<p>
+  The basis $\hat{u},\hat{v}$ is rotated by $\theta =
+  {{params.thetaAbs}}^\circ$ from the the Cartesian basis
+  $\hat\imath,\hat\jmath$, as shown. The vector $\vec{r}$ is
+  \[\begin{aligned}
+  \vec{r} &amp;= {{params.r_vec}}{\rm\ m}
+  \end{aligned}\]
+</p>
+<p>
+<pl-drawing grid-size="0" height="310" width="500">
+<pl-drawing-initial>
+<pl-vector angle="0" color="#000000" label="\\hat{\\imath}" stroke-width="1.5" width="70" x1="250" y1="155"></pl-vector>
+<pl-vector angle="-90" color="#000000" label="\\hat{\\jmath}" offsetx="-15" offsety="-15" stroke-width="1.5" width="70" x1="250" y1="155"></pl-vector>
+<pl-vector angle="{{params.u_theta}}" color="#0000FF" label="\\hat{u}" stroke-width="1.5" width="70" x1="250" y1="155"></pl-vector>
+<pl-vector angle="{{params.v_theta}}" color="#0000FF" label="\\hat{v}" stroke-width="1.5" width="70" x1="250" y1="155"></pl-vector>
+<pl-arc-dimensions draw-end-arrow="{{params.drawEndArrow}}" draw-start-arrow="{{params.drawStartArrow}}" end-angle="{{params.endAngle}}" label="\\theta" offsetx="{{params.offsetx}}" offsety="{{params.offsety}}" radius="30" start-angle="{{params.startAngle}}" x1="250" y1="155"></pl-arc-dimensions>
+<pl-vector angle="{{params.r_theta}}" color="#0000FF" label="\\vec{r}" stroke-width="1.5" width="{{params.rwidth}}" x1="250" y1="155"></pl-vector>
+</pl-drawing-initial>
+</pl-drawing>
+</p>
+<p>
+<pl-variable-output default-tab="sympy" digits="0">
+<variable comment="in degrees" params-name="thetaAbs">theta</variable>
+<variable params-name="r">r</variable>
+</pl-variable-output>
+</p>
+<p>
+  What is $\vec{r}$ in the $\hat{u},\hat{v}$ basis?
+</p>
+</pl-question-panel>
+<p>
+$\vec{r} = $
+  <pl-number-input answers-name="ru" atol="1e-5" comparison="relabs" display="inline" rtol="1e-2" show-placeholder="false" size="15"></pl-number-input> $\hat{u} + $
+<pl-number-input answers-name="rv" atol="1e-5" comparison="relabs" display="inline" rtol="1e-2" show-placeholder="false" size="15"></pl-number-input> $\hat{v}{\rm\ m}$
+</p>
+
+<pl-question-panel>
+<hr/>
+<p class="small text-muted">
+    Problem is from the <a href="https://www.prairielearn.com/oer">PrairieLearn OER repository</a>, licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>.
+    </p>
+</pl-question-panel>

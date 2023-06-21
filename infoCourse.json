@@ -1,17 +1,111 @@
 {
     "uuid": "fe472cd2-4759-4c0d-9b19-7383ca9b2817",
-    "name": "TPL 101",
-    "title": "Template Course",
-    "assessmentSets": [
-      {"abbreviation": "G", "name": "Gallery", "heading": "Gallery of questions using different PrairieLearn elements", "color": "orange1", "description": "Gallery of PL questions"}
+    "name": "OER 104",
+    "title": "Dynamics",
+    "assessmentSets": [],
+    "topics": [
+        {
+            "name": "Vector operations and arithmetic",
+            "color": "blue3"
+        },
+        {
+            "name": "Cartesian and polar coordinates",
+            "color": "purple3"
+        },
+        {
+            "name": "Cylindrical coordinates",
+            "color": "purple2"
+        },
+        {
+            "name": "Spherical coordinates",
+            "color": "purple1"
+        },
+        {
+            "name": "Vector calculus",
+            "color": "blue2"
+        },
+        {
+            "name": "Cartesian velocities and accelerations",
+            "color": "yellow3"
+        },
+        {
+            "name": "Polar velocities and accelerations",
+            "color": "yellow2"
+        },
+        {
+            "name": "Rotations and angular velocity",
+            "color": "turquoise3"
+        },
+        {
+            "name": "Tangential/normal basis",
+            "color": "yellow1"
+        },
+        {
+            "name": "Point-mass kinetics",
+            "color": "red3"
+        },
+        {
+            "name": "Projectile",
+            "color": "orange3"
+        },
+        {
+            "name": "Rigid body kinematics",
+            "color": "green3"
+        },
+        {
+            "name": "Instantaneous centers",
+            "color": "green2"
+        },
+        {
+            "name": "Constrained motion",
+            "color": "green1"
+        },
+        {
+            "name": "Gears",
+            "color": "turquoise1"
+        },
+        {
+            "name": "Rolling motion",
+            "color": "turquoise2"
+        },
+        {
+            "name": "Center of mass",
+            "color": "brown3"
+        },
+        {
+            "name": "Moment of inertia",
+            "color": "brown2"
+        },
+        {
+            "name": "Rigid body kinetics",
+            "color": "red2"
+        },
+        {
+            "name": "Friction",
+            "color": "pink3"
+        },
+        {
+            "name": "Energy",
+            "color": "pink2"
+        },
+        {
+            "name": "Numerical methods",
+            "color": "blue1"
+        },
+        {
+            "name": "Linear and angular momentum",
+            "color": "pink1"
+        },
+        {
+            "name": "Unsorted",
+            "color": "gray3"
+        }
+    ],
+    "tags": [
+        {"name": "author:prairielearn.com", "color": "blue3", "description": "questions created by prairielearn team"},
+        {"name": "license:CC-BY-NC", "color": "yellow3", "description": "license for all prairielearn.com questions"}    
     ],
     "options": {
         "useNewQuestionRenderer": true
-    },
-    "topics": [
-        {"name": "Gallery", "color": "orange1", "description": "Gallery of PL questions"}
-    ],
-    "tags": [
-        {"name": "mariana@prairielearn.com", "color": "gray1", "description": "Author of the original question"}
-    ]
+    }
 }

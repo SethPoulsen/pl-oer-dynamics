@@ -1,0 +1,44 @@
+<pl-question-panel>
+<p>
+  A bar of width $w = {{params.w}}\rm\ m$ is formed of three
+  uniform segments with lengths and areal densities given by:
+  \[\begin{aligned}
+  \ell_1 &amp;= {{params.l1}}{\rm\ m}
+  &amp;
+  \rho_1 = {{params.rho1}}{\rm\ kg/m^2}
+  \\
+  \ell_2 &amp;= {{params.l2}}{\rm\ m}
+  &amp;
+  \rho_2 = {{params.rho2}}{\rm\ kg/m^2}
+  \\
+  \ell_3 &amp;= {{params.l3}}{\rm\ m}
+  &amp;
+  \rho_3 = {{params.rho3}}{\rm\ kg/m^2}.
+  \end{aligned}\]
+</p>
+<pl-drawing grid-size="0" height="250" width="400">
+<pl-drawing-initial>
+    	{{{params.drawCode}}}
+    </pl-drawing-initial>
+</pl-drawing>
+<p>
+<pl-variable-output default-tab="sympy" digits="0">
+<variable params-name="w">w</variable>
+    {{{params.pl_var_output}}}
+</pl-variable-output>
+</p>
+<p>
+  What is the moment of inertia $I_C$ of the bar about the center
+  of mass $C$?
+</p>
+</pl-question-panel>
+<p>
+$I_C = $
+<pl-number-input answers-name="IC" atol="1e-5" comparison="relabs" display="inline" rtol="1e-2" show-placeholder="false" size="15"></pl-number-input> ${\rm\ kg\ m^2} $
+</p>
+<pl-question-panel>
+<hr/>
+<p class="small text-muted">
+    Problem is from the <a href="https://www.prairielearn.com/oer">PrairieLearn OER repository</a>, licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>.
+    </p>
+</pl-question-panel>

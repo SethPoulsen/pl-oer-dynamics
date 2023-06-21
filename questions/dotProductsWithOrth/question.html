@@ -1,0 +1,44 @@
+<pl-question-panel>
+<p>
+  The vector $\vec{a} = {{params.a_vec}}{\rm\ m}$ is
+  shown below, as well as an orthogonal vector $\vec{b}$ that has
+  the same length as $\vec{a}$.
+</p>
+<p>
+<pl-drawing grid-size="0" height="310" width="500">
+<pl-drawing-initial>
+<pl-vector angle="{{params.a_angle}}" color="#0000FF" label="\\vec{a}" stroke-width="1.5" width="{{params.width}}" x1="{{params.Ox}}" y1="{{params.Oy}}"></pl-vector>
+<pl-vector angle="{{params.b_angle}}" color="#0000FF" label="\\vec{b}" stroke-width="1.5" width="{{params.width}}" x1="{{params.Ox}}" y1="{{params.Oy}}"></pl-vector>
+      {{{params.drawRightAngle}}}
+    </pl-drawing-initial>
+</pl-drawing>
+</p>
+<p>
+  A third vector $\vec{c}$ (not shown) has the dot products:
+  \[\begin{aligned}
+  \vec{c} \cdot \vec{a} &amp;= {{params.cDotA}}{\rm\ m^2} \\
+  \vec{c} \cdot \vec{b} &amp;= {{params.cDotB}}{\rm\ m^2}.
+  \end{aligned}\]
+</p>
+<p>
+<pl-variable-output default-tab="sympy" digits="0">
+<variable params-name="a">a</variable>
+<variable params-name="cDotA">c_dot_a</variable>
+<variable params-name="cDotB">c_dot_b</variable>
+</pl-variable-output>
+</p>
+<p>
+  What are the components of $\vec{c}$?
+</p>
+</pl-question-panel>
+<p>
+$\vec{c} = $
+	<pl-number-input answers-name="cx" atol="1e-5" comparison="relabs" display="inline" rtol="1e-2" show-placeholder="false" size="15"></pl-number-input> $\hat{\imath} + $
+<pl-number-input answers-name="cy" atol="1e-5" comparison="relabs" display="inline" rtol="1e-2" show-placeholder="false" size="15"></pl-number-input> $\hat{\jmath}{\rm\ m}$
+</p>
+<pl-question-panel>
+<hr/>
+<p class="small text-muted">
+    Problem is from the <a href="https://www.prairielearn.com/oer">PrairieLearn OER repository</a>, licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>.
+    </p>
+</pl-question-panel>

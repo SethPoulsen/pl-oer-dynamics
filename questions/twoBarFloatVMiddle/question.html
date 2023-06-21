@@ -1,0 +1,48 @@
+<pl-question-panel>
+<p>
+  Two rods are connected with a pin joint at $A$ as
+  shown, and at the current instant we have:
+  \[\begin{aligned}
+  \vec{r}_{PA} &amp;= {{params.rPA_vec}}{\rm\ m}
+  &amp;
+  \vec{r}_{QA} &amp;= {{params.rQA_vec}}{\rm\ m}
+  \\
+  \vec{v}_P &amp;= {{params.vP_vec}}{\rm\ m/s}
+  &amp;
+  \vec{v}_Q &amp;= {{params.vQ_vec}}{\rm\ m/s}.
+  \end{aligned}\]
+</p>
+<pl-drawing grid-size="0" height="400" width="400">
+<pl-drawing-initial>
+<pl-rod draw-pin="false" width="10" x1="{{params.Px}}" x2="{{params.Ax}}" y1="{{params.Py}}" y2="{{params.Ay}}"></pl-rod>
+<pl-rod draw-pin="false" width="10" x1="{{params.Qx}}" x2="{{params.Ax}}" y1="{{params.Qy}}" y2="{{params.Ay}}"></pl-rod>
+<pl-point label="P" radius="2" x1="{{params.Px}}" y1="{{params.Py}}"></pl-point>
+<pl-point label="A" radius="2" x1="{{params.Ax}}" y1="{{params.Ay}}"></pl-point>
+<pl-point label="Q" radius="2" x1="{{params.Qx}}" y1="{{params.Qy}}"></pl-point>
+<pl-vector angle="{{params.vPangle}}" color="green2" label="\\vec{v}_P" stroke-width="1.5" width="{{params.vPwidth}}" x1="{{params.Px}}" y1="{{params.Py}}"></pl-vector>
+<pl-vector angle="{{params.vQangle}}" color="green2" label="\\vec{v}_Q" stroke-width="1.5" width="{{params.vQwidth}}" x1="{{params.Qx}}" y1="{{params.Qy}}"></pl-vector>
+</pl-drawing-initial>
+</pl-drawing>
+<p>
+<pl-variable-output default-tab="sympy" digits="0">
+<variable params-name="rPA">rPA</variable>
+<variable params-name="rQA">rQA</variable>
+<variable params-name="vP">vP</variable>
+<variable params-name="vQ">vQ</variable>
+</pl-variable-output>
+</p>
+<p>
+  What is $\vec{v}_A$?
+</p>
+</pl-question-panel>
+<p>
+	$\vec{v}_A = $
+<pl-number-input answers-name="vAx" atol="1e-5" comparison="relabs" display="inline" rtol="1e-2" show-placeholder="false" size="15"></pl-number-input> $\hat{\imath} + $
+<pl-number-input answers-name="vAy" atol="1e-5" comparison="relabs" display="inline" rtol="1e-2" show-placeholder="false" size="15"></pl-number-input> $\hat{\jmath}{\rm\ m/s}$
+</p>
+<pl-question-panel>
+<hr/>
+<p class="small text-muted">
+    Problem is from the <a href="https://www.prairielearn.com/oer">PrairieLearn OER repository</a>, licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>.
+    </p>
+</pl-question-panel>

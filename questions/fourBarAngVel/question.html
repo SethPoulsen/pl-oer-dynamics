@@ -1,0 +1,56 @@
+<pl-question-panel>
+<p>
+  A four-bar linkage has rigid rods connecting pins at $A$, $B$,
+  $C$, and $D$, as shown. The angular velocities of the rods are
+  $\vec\omega_1 = {{params.omega1_vec}}$ for rod $AD$,
+  $\vec\omega_2 = {{params.omega2_vec}}$ for rod $BC$, and
+  $\vec\omega_3 = {{params.omega3_vec}}$ for rod $DC$.
+</p>
+<pl-drawing grid-size="0" height="310" width="500">
+<pl-drawing-initial>
+<pl-fixed-pin color="#FFFFFF" draw-ground="false" draw-pin="false" height="30" width="22" x1="{{params.Ax}}" y1="{{params.Ay}}"></pl-fixed-pin>
+<pl-fixed-pin color="#FFFFFF" draw-ground="false" draw-pin="false" height="30" width="22" x1="{{params.Bx}}" y1="{{params.By}}"></pl-fixed-pin>
+        {{{params.drawGround}}}
+        <pl-rod draw-pin="false" width="15" x1="{{params.Ax}}" x2="{{params.Dx}}" y1="{{params.Ay}}" y2="{{params.Dy}}"></pl-rod>
+<pl-rod draw-pin="false" width="15" x1="{{params.Dx}}" x2="{{params.Cx}}" y1="{{params.Dy}}" y2="{{params.Cy}}"></pl-rod>
+<pl-rod draw-pin="false" width="15" x1="{{params.Cx}}" x2="{{params.Bx}}" y1="{{params.Cy}}" y2="{{params.By}}"></pl-rod>
+<pl-rod draw-pin="false" width="15" x1="{{params.Bx}}" x2="{{params.Ax}}" y1="{{params.By}}" y2="{{params.Ay}}"></pl-rod>
+<pl-point label="A" offsetx="-30" offsety="0" radius="2" x1="{{params.Ax}}" y1="{{params.Ay}}"></pl-point>
+<pl-point label="B" offsetx="15" offsety="0" radius="2" x1="{{params.Bx}}" y1="{{params.By}}"></pl-point>
+<pl-point label="D" offsetx="-30" offsety="0" radius="2" x1="{{params.Dx}}" y1="{{params.Dy}}"></pl-point>
+<pl-point label="C" offsetx="15" offsety="0" radius="2" x1="{{params.Cx}}" y1="{{params.Cy}}"></pl-point>
+        {{{params.drawOmega1}}}
+        {{{params.drawOmega2}}}
+        {{{params.drawOmega3}}}
+    </pl-drawing-initial>
+</pl-drawing>
+<p>
+  At the current instant the positions are:
+  \[\begin{aligned}
+  \vec{r}_{AB} &amp;= {{params.rAB_vec}}{\rm\ m} \\
+  \vec{r}_{BC} &amp;= {{params.rBC_vec}}{\rm\ m} \\
+  \vec{r}_{AD} &amp;= {{params.rAD_vec}}{\rm\ m} \\
+  \vec{r}_{DC} &amp;= {{params.rDC_vec}}{\rm\ m}.
+  \end{aligned}\]
+</p>
+<p>
+<pl-variable-output default-tab="sympy" digits="0">
+<variable params-name="rAB">rAB</variable>
+<variable params-name="rBC">rBC</variable>
+<variable params-name="rAD">rAD</variable>
+<variable params-name="rDC">rDC</variable>
+<variable params-name="{{params.givenVar}}">{{params.givenVar}}</variable>
+</pl-variable-output>
+</p>
+<p> What is $\vec{\omega}_{{params.findIndex}}$?</p>
+</pl-question-panel>
+<p>
+$\vec{\omega}_{{params.findIndex}} = $
+    <pl-number-input answers-name="omega" atol="1e-5" comparison="relabs" display="inline" rtol="1e-2" show-placeholder="false" size="15"></pl-number-input> $\hat{k}{\rm\ rad/s} $
+</p>
+<pl-question-panel>
+<hr/>
+<p class="small text-muted">
+    Problem is from the <a href="https://www.prairielearn.com/oer">PrairieLearn OER repository</a>, licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>.
+    </p>
+</pl-question-panel>

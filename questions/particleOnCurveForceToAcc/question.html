@@ -1,0 +1,41 @@
+<pl-question-panel>
+<p>
+  A particle of mass $m = {{params.m}}\rm\ kg$ is moving along
+  a guide wire with shape given by $y(x) = {{params.ylatex}} {\rm\ m}$, where $x$ is in meters. Gravity
+  $\vec{g} = -9.8\hat\jmath\rm\ m/s^2$ acts vertically. At the
+  current instant the particle has $x = {{params.x_value}}\rm\ m$ and
+  the force of the wire on the particle is $\vec{F}_w =
+  {{params.Fw_vec}}\rm\ N$.
+</p>
+<pl-figure file-name="figure.png" type="dynamic"></pl-figure>
+<p>
+<pre>
+Python Inputs:
+
+import numpy as np
+from sympy import *
+
+x = symbols('x')
+
+m = {{params.m}}
+y = {{params.y}}
+g = -9.8
+x_v = {{params.x_value}}
+Fw = Matrix([{{params.Fwx}}, {{params.Fwy}}, 0])
+</pre>
+</p>
+<p>
+  What is the acceleration $\vec{a}$ of the particle?
+</p>
+</pl-question-panel>
+<p>
+$\vec{a} = $
+  <pl-number-input answers-name="ax" atol="1e-5" comparison="relabs" display="inline" rtol="1e-2" show-placeholder="false" size="15"></pl-number-input> $\hat{\imath} + $
+  <pl-number-input answers-name="ay" atol="1e-5" comparison="relabs" display="inline" rtol="1e-2" show-placeholder="false" size="15"></pl-number-input> $\hat{\jmath}{\rm\ m/s^2}$
+</p>
+<pl-question-panel>
+<hr/>
+<p class="small text-muted">
+    Problem is from the <a href="https://www.prairielearn.com/oer">PrairieLearn OER repository</a>, licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>.
+    </p>
+</pl-question-panel>

@@ -1,0 +1,45 @@
+<pl-question-panel>
+<p>
+  The basis $\hat{u},\hat{v}$ is rotated by $\theta =
+  {{params.theta}}^\circ$ from horizontal, as shown. The
+  points $O$, $Q$, and $P$ are related by:
+  \[\begin{aligned}
+  \vec{r}_{OQ} &amp;= {{params.rOQ_vec}}{\rm\ m} \\
+  \vec{r}_{QP} &amp;= {{params.rQP_vec}}{\rm\ m}.
+  \end{aligned}\]
+</p>
+<pl-drawing grid-size="0" height="310" width="500">
+<pl-drawing-initial>
+<pl-point label="O" radius="2" x1="{{params.Ox}}" y1="{{params.Oy}}"></pl-point>
+<pl-point label="P" radius="2" x1="{{params.Px}}" y1="{{params.Py}}"></pl-point>
+<pl-point label="Q" offsetx="{{params.Qoffsetx}}" offsety="{{params.Qoffsety}}" radius="2" x1="{{params.Qx}}" y1="{{params.Qy}}"></pl-point>
+<pl-vector angle="0" color="#000000" label="\\hat{\\imath}" stroke-width="1.5" width="50" x1="{{params.Ox}}" y1="{{params.Oy}}"></pl-vector>
+<pl-vector angle="-90" color="#000000" label="\\hat{\\jmath}" offsetx="-15" offsety="-15" stroke-width="1.5" width="50" x1="{{params.Ox}}" y1="{{params.Oy}}"></pl-vector>
+<pl-line angle="0" stroke-color="#c8c8c8" stroke-width="2" x1="{{params.Qx}}" y1="{{params.Qy}}"></pl-line>
+<pl-vector angle="{{params.u_theta}}" color="#0000FF" label="\\hat{u}" stroke-width="1.5" x1="{{params.Qx}}" y1="{{params.Qy}}"></pl-vector>
+<pl-vector angle="{{params.v_theta}}" color="#0000FF" label="\\hat{v}" stroke-width="1.5" x1="{{params.Qx}}" y1="{{params.Qy}}"></pl-vector>
+<pl-arc-dimensions draw-end-arrow="{{params.drawEndArrow}}" draw-start-arrow="{{params.drawStartArrow}}" end-angle="{{params.endAngle}}" label="\\theta" offsetx="{{params.offsetx}}" offsety="{{params.offsety}}" radius="30" start-angle="{{params.startAngle}}" x1="{{params.Qx}}" y1="{{params.Qy}}"></pl-arc-dimensions>
+</pl-drawing-initial>
+</pl-drawing>
+<p>
+<pl-variable-output default-tab="sympy" digits="0">
+<variable comment="in degrees" params-name="theta">theta</variable>
+<variable params-name="rOQ">rOQ</variable>
+<variable params-name="rQP">rQP</variable>
+</pl-variable-output>
+</p>
+<p>
+  What is $\vec{r}_{OP}$ in the $\hat{u},\hat{v}$ basis?
+</p>
+</pl-question-panel>
+<p>
+$\vec{r}_{OP} = $
+	<pl-number-input answers-name="rOPu" atol="1e-5" comparison="relabs" display="inline" rtol="1e-2" show-placeholder="false" size="15"></pl-number-input> $\hat{u} + $
+	<pl-number-input answers-name="rOPv" atol="1e-5" comparison="relabs" display="inline" rtol="1e-2" show-placeholder="false" size="15"></pl-number-input> $\hat{v} {\rm\ m}$
+</p>
+<pl-question-panel>
+<hr/>
+<p class="small text-muted">
+    Problem is from the <a href="https://www.prairielearn.com/oer">PrairieLearn OER repository</a>, licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>.
+    </p>
+</pl-question-panel>
